@@ -40,3 +40,4 @@ jobs:
         with:
           name: file-comparator-app
           path: build/distributions/*.zip
+          
