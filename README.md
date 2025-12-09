@@ -1,6 +1,6 @@
 # File Integrity Monitor
 
-
+[![Java CI/CD Pipeline](https://github.com/dezshev/IPPRPO3/actions/workflows/ci-cd.yml/badge.svg?branch=main)](https://github.com/dezshev/IPPRPO3/actions/workflows/ci-cd.yml)
 
 **File Integrity Monitor** — это консольная утилита для контроля целостности файловой системы. Приложение создает "снимки" (snapshots) директорий и сравнивает их, чтобы показать, какие файлы были добавлены, удалены или изменены.
 ## Описание проекта
