@@ -21,7 +21,8 @@
 Перед началом работы убедитесь, что на вашем компьютере установлены Java и Git.
 
 ### 1. Java Development Kit (JDK)
-Для работы проекта рекомендуется использовать **JDK 17**.
+Для работы проекта следует использовать **JDK 17**.
+Для работы проекта следует использовать **Gradle 8.5**.
 
 **Как проверить наличие:**
 Откройте терминал и введите:
@@ -91,12 +92,6 @@ app.mode=scan
 .\gradlew.bat clean installDist
 ```
 
-**Для Linux / macOS:**
-```bash
-chmod +x gradlew
-./gradlew clean installDist
-```
-
 *Если вы видите сообщение `BUILD SUCCESSFUL`, значит сборка прошла успешно.*
 
 ## Запуск тестов
@@ -106,10 +101,6 @@ chmod +x gradlew
 **Windows:**
 ```powershell
 .\gradlew.bat test
-```
-**Linux / macOS:**
-```bash
-./gradlew test
 ```
 
 Результаты тестирования можно посмотреть в браузере, открыв файл:
@@ -134,7 +125,7 @@ chmod +x gradlew
 
 **Команда для Windows (PowerShell):**
 ```powershell
-$env:SCAN_PATH="./test_data/v1"; $env:SNAPSHOT_OUTPUT="./snapshot_v1.json"; .\build\install\industrial-software3v2\bin\industrial-software3v2.bat scan
+$env:SCAN_PATH = "test_data/v1"; $env:SNAPSHOT_OUTPUT = "snapshot_v1.json"; & .\build\install\FileIntegrityMonitor\bin\FileIntegrityMonitor.bat scan
 ```
 
 ### 2. Сканируем измененную версию
@@ -147,7 +138,7 @@ $env:SCAN_PATH="./test_data/v1"; $env:SNAPSHOT_OUTPUT="./snapshot_v1.json"; .\bu
 
 **Команда для Windows (PowerShell):**
 ```powershell
-$env:SCAN_PATH="./test_data/v2"; $env:SNAPSHOT_OUTPUT="./snapshot_v2.json"; .\build\install\industrial-software3v2\bin\industrial-software3v2.bat scan
+$env:SCAN_PATH = "test_data/v2"; $env:SNAPSHOT_OUTPUT = "snapshot_v2.json"; & .\build\install\FileIntegrityMonitor\bin\FileIntegrityMonitor.bat scan
 ```
 
 ### 3. Сравнение (Режим Diff)
@@ -160,7 +151,7 @@ $env:SCAN_PATH="./test_data/v2"; $env:SNAPSHOT_OUTPUT="./snapshot_v2.json"; .\bu
 
 **Команда для Windows (PowerShell):**
 ```powershell
-$env:SNAPSHOT_OLD="./snapshot_v1.json"; $env:SNAPSHOT_NEW="./snapshot_v2.json"; .\build\install\industrial-software3v2\bin\industrial-software3v2.bat diff
+$env:SNAPSHOT_OLD = "snapshot_v1.json"; $env:SNAPSHOT_NEW = "snapshot_v2.json"; & .\build\install\FileIntegrityMonitor\bin\FileIntegrityMonitor.bat diff
 ```
 
 ### 4. Ожидаемый результат
