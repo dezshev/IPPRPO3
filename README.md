@@ -163,6 +163,7 @@ Comparing: ./snapshot_v1.json vs ./snapshot_v2.json
 ADDED: helper.java
 CHANGED: utils.java
 REMOVED: config.xml
+REMOVED: main.java
 ```
 
 **Пояснение:**
